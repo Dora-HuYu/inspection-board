@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# 设备巡检任务看板
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+这是一个React 入门项目，用于展示我第一周学习 B站【2025】React入门实战教程 React 前 1–7 节课程的成果。
+https://www.bilibili.com/video/BV1CQdWYDEG7?utm_source=chatgpt.com&vd_source=9051b8474cb624f30e02488e37827d4b&spm_id_from=333.788.videopod.episodes
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 项目简介
 
-### `npm start`
+本项目模拟一个简单的设备巡检任务看板，支持用户添加设备任务、查看任务清单、删除任务等基础功能。
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 项目功能
 
-### `npm test`
+- 添加新的巡检任务（设备名称 + 所属区域）
+- 展示当前所有任务列表
+- 删除指定任务
+- 显示任务总数量
+- 若无任务，显示提示信息
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 所用技术
+React JSX：使用 JSX 构建组件结构 
+useState：用于状态管理：任务列表、输入框  
+props：父组件传参给子组件
+事件绑定 onClick：添加 / 删除按钮操作 
+列表渲染 map：动态渲染任务项列表
+条件渲染：若任务为空显示提示信息
+组件化：App/ InspectionList/ InspectionItem结构
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 项目结构
+src/
+├── App.jsx
+├── main.jsx
+└── components/
+    ├── InspectionList.jsx
+    └── InspectionItem.jsx
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 如何运行本项目
 
-### `npm run eject`
+### 1. 克隆代码
+```bash
+git clone https://github.com/your-username/inspection-board.git
+cd inspection-board
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. 安装依赖
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. 启动开发服务器
+npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
